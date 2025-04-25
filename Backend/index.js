@@ -28,7 +28,7 @@ app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
-const __dirname = path.resolve();
+const _dirname = path.resolve();
 
 // API Routes
 app.use("/api/v1/user", userRoute);
@@ -36,9 +36,9 @@ app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
-app.use(express.static(path.join(__dirname, "./Frontend/dist")));
+app.use(express.static(path.join(_dirname, "./Frontend/dist")));
 app.get("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"));
+  res.sendFile(path.resolve(_dirname, "Frontend", "dist", "index.html"));
 });
 
 // Start Server

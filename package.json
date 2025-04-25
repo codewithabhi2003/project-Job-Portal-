@@ -7,10 +7,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon backend/index.js",
+    "dev": "nodemon Backend/index.js",
     "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend",
-    "start": "node backend/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon Backend/index.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
