@@ -39,7 +39,7 @@ const Login = () => {
       if (res.data.success) {
         toast.success(res.data.message);
         dispatch(setUser(res.data.user));
-        navigate("/"); // ✅ Correct way to navigate
+        
       }
     } catch (error) {
       console.log(error);
@@ -53,7 +53,7 @@ const Login = () => {
     if (user){
       navigate("/"); 
     }
-  },[])
+  },[user, navigate])
 
   return (
     <div>
